@@ -97,7 +97,8 @@ button {
 }
 
 .popup {
-  width: 400px;
+  width: 70%;
+  max-width: 400px;
   background: #ecdff6;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
