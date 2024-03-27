@@ -14,27 +14,90 @@ function divide(a, b) {
   return a / b;
 }
 
-let first;
+let first = '';
 let operation;
-let last;
+let last = '';
+let haveOperator = false;
 
 function operate(first, operation, last) {
+  if (first == '') {first = 0;}
+  if (last == '') {last = 0;}
+  console.log("calculating!");
   switch (operation) {
-    case "add":
-      add(first, last);
+    case "plus":
+      return add(+first, +last);
       break;
     case "subtract":
-      subtract(first, last);
+      return subtract(+first, +last);
       break;
     case "multiply":
-      multiply(first, last);
+      return multiply(+first, +last);
       break;
     case "divide":
-      divide(first, last);
+      if (last == 0) {
+        return 'you cant divide by zero you fool!?';
+        break;
+      }
+      return divide(+first, +last);
       break;
     default:
-      return "error";
+      return first;
   }
 }
 
-const display = document.querySelector('#display');
+const display = document.querySelector("#display");
+const clearButton = document.querySelector("#clear");
+const buttons = document.querySelectorAll(".typed");
+const numberButtons = document.querySelectorAll(".numbers button");
+const equalButton = document.querySelector("#equal");
+const calculationButtons = document.querySelectorAll(".calculation .typed");
+
+let displayedString = "";
+function displayString() {
+  display.textContent = displayedString;
+}
+
+for (const button of buttons) {
+  button.addEventListener("click", () => {
+    displayedString += button.textContent;
+    displayString();
+  });
+}
+
+clearButton.addEventListener("click", () => {
+  displayedString = "";
+  display.textContent = '0';
+  resetValue();
+});
+
+function resetValue() {
+  first = '';
+  last = '';
+  operation = "";
+  haveOperator = false;
+}
+
+for (const number of numberButtons) {
+  number.addEventListener("click", () => {
+    if (!haveOperator) {
+      first += number.textContent;
+    } else {
+      last += number.textContent;
+    }
+  });
+}
+
+for (const operator of calculationButtons) {
+  operator.addEventListener("click", () => {
+    operation = operator.id;
+    haveOperator = true;
+  });
+}
+
+equalButton.addEventListener("click", () => {
+  displayedString = operate(first, operation, last);
+  displayString();
+  first = displayedString;
+  last = '';
+  operation = '';
+});
