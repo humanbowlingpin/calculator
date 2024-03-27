@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>DUSTY FIRST CALCULATOR</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <div>hey i made this buggy calculator &#129299;&#9757;, it also rounded the number to 10 decimals</div>
-        <div class="calculator">
-            <div id="display">0</div>
-            <div class="buttons">
-                <div class="numbers">
-                    <button id="one" value="1">1</button>
-                    <button id="two">2</button>
-                    <button id="three">3</button>
-                    <button id="four">4</button>
-                    <button id="five">5</button>
-                    <button id="six">6</button>
-                    <button id="seven">7</button>
-                    <button id="eight">8</button>
-                    <button id="nine">9</button>
-                    <button id="zero">0</button>
-                    <button id="float">.</button>
-                </div>
-                <div class="function">
-                    <button id="clear">AC</button>
-                    <button class="calculation" id="add"> + </button>
-                    <button class="calculation" id="subtract"> - </button>
-                    <button class="calculation" id="multiply"> x </button>
-                    <button class="calculation" id="divide"> ÷ </button>
-                    <button id="backspace">&larr;</button>
-                    <button id="equal">=</button>
-                </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DUSTY FIRST CALCULATOR</title>
+    <meta name="description"
+        content="simple calculator I made as a practice project, have a bunch of keyboard shortcuts">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>hey i made this buggy calculator &#129299;&#9757;, it also rounded the number to 10 decimals</div>
+    <div class="calculator">
+        <div id="display">0</div>
+        <div class="buttons">
+            <div class="first-row row">
+                <button id="clear">AC</button>
+                <button>LMAO</button>
+                <button id="backspace">&larr;</button>
+                <button class="calculation-button" id="divide"> ÷ </button>
             </div>
+<div class="sec-row row">
+                <button class="number-button" id="seven">7</button>
+                <button class="number-button" id="eight">8</button>
+                <button class="number-button" id="nine">9</button>
+                <button class="calculation-button" id="multiply">*</button>
+</div>
+
+            <div class="third-row row">
+                <button class="number-button" id="four">4</button>
+                <button class="number-button" id="five">5</button>
+                <button class="number-button" id="six">6</button>
+                <button class="calculation-button" id="subtract">-</button>
+            </div>
+
+            <div class="forth-row row">
+                <button class="number-button" id="one" value="1">1</button>
+                <button class="number-button" id="two">2</button>
+                <button class="number-button" id="three">3</button>
+                <button class="calculation-button" id="add">+</button>
+            </div>
+
+
+<div class="fifth-row row">
+    
+                <button class="number-button" id="zero">0</button>
+                <button class="number-button" id="float">.</button>
+                <button id="equal">=</button>
+</div>
         </div>
-        <script src="script.js" async defer></script>
-    </body>
+    </div>
+    <script src="script.js" async defer></script>
+</body>
+
 </html>

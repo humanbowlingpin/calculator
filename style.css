@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Dosis;
+    background-color: pink;
+}
+
+.calculator {
+    background-color: blue;
+    border-radius: 1em;
+    width: 70%;
+    max-width: 500px;
+    margin: auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#display {
+    background-color: rgb(25, 25, 87);
+    border-radius: .5em;
+    /* margin: auto; */
+    padding: 0 2em;
+    height: 80px;
+    text-align: end;
+    color: white;
+    font-size: 30px;
+    overflow: auto;
+    margin-bottom: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#display::-webkit-scrollbar {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.row {
+    display: flex;
+    gap: .5em;
+}
+
+button {
+    height: 80px;
+    border-radius: .5em;
+    background-color: rgb(14, 26, 48);
+    color: white;
+    font-family: Dosis;
+    font-size: 30px;
+    flex: 1;
+    border: 0px;
+}
+
+#zero {
+    flex: 2.2;
+}

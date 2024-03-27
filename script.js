@@ -56,8 +56,8 @@ const display = document.querySelector("#display");
 const clearButton = document.querySelector("#clear");
 const equalButton = document.querySelector("#equal");
 const backspaceButton = document.querySelector("#backspace");
-const numberButtons = document.querySelectorAll(".numbers button");
-const calculationButtons = document.querySelectorAll(".calculation");
+const numberButtons = document.querySelectorAll(".number-button");
+const calculationButtons = document.querySelectorAll(".calculation-button");
 
 let displayedString = "";
 function displayString() {
