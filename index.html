@@ -12,22 +12,44 @@
 </head>
 
 <body>
-    <div>hey i made this buggy calculator &#129299;&#9757;, it also rounded the number to 10 decimals</div>
+    <div class="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>Hello</h2>
+        <p>This is my first ever attempt at making a calculator&#129299;&#9757;</p>
+        <p>Keyboard shortcuts :
+            <br>C to clear
+            <br>Backspace to delete
+            <br>/ for division
+            <br>* for multiply
+            <br>- for minus
+            <br>+ for addition
+            <br>. for float numbers
+            <br>Enter for calculation
+            <br>and numbers are.. well. their respective number
+        </p>
+        <p>Numbers are round to 10 decimals.</p>
+        <h3>Made by Humanbowlingpin</h3>
+        <button type="button" onclick="closePopup()">OK</button>
+    </div>
+    <h1>Dusty Calculator</h1>
     <div class="calculator">
-        <div id="display">0</div>
+        <div class="display-container">
+            <p id="display">0</p>
+        </div>
         <div class="buttons">
             <div class="first-row row">
-                <button id="clear">AC</button>
-                <button>LMAO</button>
-                <button id="backspace">&larr;</button>
+                <button class="function-button" id="clear">AC</button>
+                <button class="function-button" id="lmao" onclick="openPopup()">i</button>
+                <button class="function-button" id="backspace">&larr;</button>
                 <button class="calculation-button" id="divide"> ÷ </button>
             </div>
-<div class="sec-row row">
+
+            <div class="sec-row row">
                 <button class="number-button" id="seven">7</button>
                 <button class="number-button" id="eight">8</button>
                 <button class="number-button" id="nine">9</button>
                 <button class="calculation-button" id="multiply">*</button>
-</div>
+            </div>
 
             <div class="third-row row">
                 <button class="number-button" id="four">4</button>
@@ -43,13 +65,11 @@
                 <button class="calculation-button" id="add">+</button>
             </div>
 
-
-<div class="fifth-row row">
-    
+            <div class="fifth-row row">
                 <button class="number-button" id="zero">0</button>
                 <button class="number-button" id="float">.</button>
                 <button id="equal">=</button>
-</div>
+            </div>
         </div>
     </div>
     <script src="script.js" async defer></script>

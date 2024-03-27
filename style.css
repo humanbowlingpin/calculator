@@ -1,65 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Dosis;
-    background-color: pink;
+  margin: 0;
+  padding: 0;
+  font-family: Dosis;
+  background-color: #08000f;
+  color: #ecdff6;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  justify-self: start;
+  white-space: nowrap;
+  margin-top: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.534);
 }
 
 .calculator {
-    background-color: blue;
-    border-radius: 1em;
-    width: 70%;
-    max-width: 500px;
-    margin: auto;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background: #bd95e0;
+  background: linear-gradient(167deg, #bd95e0 0%, #d06a60 100%);
+  border-radius: 1em;
+  width: 70%;
+  max-width: 500px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
 }
+.display-container {
+  background-color: #08000f;
+  border-radius: 0.5em;
+  /* margin: auto; */
+  padding: 0 1em;
+  height: 80px;
+  text-align: end;
+  color: #ecdff6;
+  font-size: 30px;
+  overflow-x: auto;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
 #display {
-    background-color: rgb(25, 25, 87);
-    border-radius: .5em;
-    /* margin: auto; */
-    padding: 0 2em;
-    height: 80px;
-    text-align: end;
-    color: white;
-    font-size: 30px;
-    overflow: auto;
-    margin-bottom: .5em;
-    display: flex;
-    align-items: center;
-    justify-content: end;
+  margin: 0;
+  overflow-x: auto;
 }
 
 #display::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .buttons {
-    display: flex;
-    flex-direction: column;
-    gap: .5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
 }
 
 .row {
-    display: flex;
-    gap: .5em;
+  display: flex;
+  gap: 0.5em;
 }
 
 button {
-    height: 80px;
-    border-radius: .5em;
-    background-color: rgb(14, 26, 48);
-    color: white;
-    font-family: Dosis;
-    font-size: 30px;
-    flex: 1;
-    border: 0px;
+  height: 80px;
+  border-radius: 0.5em;
+  background-color: #08000f;
+  color: #ecdff6;
+  font-family: Dosis;
+  font-size: 30px;
+  flex: 1;
+  border: 0px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 #zero {
-    flex: 2.2;
+  flex: 2.2;
+}
+
+.calculation-button,
+#equal {
+  background-color: #960330;
+}
+
+.function-button {
+    background-color: #ecdff6;
+    color: #08000f;
+}
+
+.popup {
+  width: 400px;
+  background: #ecdff6;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 1em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.2);
+  text-align: center;
+  padding: 0 30px 60px;
+  color: #08000f;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  z-index: 3;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.popup button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  background-color: #960330;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 1em;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: absolute;
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: #08000f7d;
+    transition: all 0.2s ease-in-out;
+}
+
+.open-overlay {
+    visibility: visible;
+    transition: all 0.2s ease-in-out;
 }

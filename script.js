@@ -120,7 +120,7 @@ for (const operator of calculationButtons) {
 }
 
 function deleteLastNumber() {
-  if (displayedString.toString().length == 1) {
+  if (displayedString.toString().length == 1 || displayedString.toString().length == 0) {
     display.innerText = 0;
     return;
   }
@@ -192,3 +192,16 @@ window.addEventListener(
   },
   false
 );
+
+let popup = document.querySelector('#popup')
+let overlay = document.querySelector('.overlay')
+
+function openPopup(){
+  popup.classList.add('open-popup')
+  overlay.classList.add('open-overlay')
+}
+
+function closePopup(){
+  popup.classList.remove('open-popup')
+  overlay.classList.remove('open-overlay')
+}
