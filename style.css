@@ -153,3 +153,9 @@ button {
     visibility: visible;
     transition: all 0.2s ease-in-out;
 }
+
+.gitHublink {
+  color: white;
+  margin-top: 1em;
+  font-size: 1.5em;
+}
